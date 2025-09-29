@@ -64,12 +64,12 @@ a:hover {
 
 /* Ensures main content is not hidden behind the navbar */
 .main-content {
-    margin-top: 90px; /* Increased for better spacing */
+    margin-top: 120px; /* Example: more space for desktop */
     padding: 0 16px;
 }
 @media (max-width: 600px) {
     .main-content {
-        margin-top: 130px; 
+        margin-top: 160px; /* Example: more space for mobile */
     }
 }
 
@@ -126,12 +126,12 @@ a:hover {
 
 /* Responsive Main Content */
 .main-content {
-    margin-top: 90px; /* Increased for better spacing */
+    margin-top: 120px; /*more space for desktop */
     padding: 0 16px;
 }
 @media (max-width: 600px) {
     .main-content {
-        margin-top: 130px; /* Increase if needed */
+        margin-top: 220px; /*more space for mobile */
     }
 }
 
