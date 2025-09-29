@@ -1,13 +1,15 @@
-# Welcome to the Emporium
+# 31st Emporium
+by: Lunghani Big-Ben Shilubane
+student number: ST10465951
 
 ## About 31st Emporium
 Founded by Benson Shiluvani in 2018, 31st Emporium began as a bold vision to empower young South African designers. What started as a college-campus idea quickly grew into a vibrant fashion platform — blending boutique elegance with streetwear energy.
 From its first store to becoming a nationally recognised brand, 31st Emporium has championed creativity, mentorship, and local pride. With initiatives like the "Designer Spotlight" and a thriving e-commerce presence, it continues to showcase the future of South African fashion.
-Motto: "Wear the future. Made in South Africa."
+Motto: "Wear the future. Made in South Africa, (Copilot, 2025)."
 
 ## The Website
 ### The Mission
-The website will serve two purposes: boost product sales and connect aspiring designers with industry leaders. Built from the ground up with people at its core, it will embody our values through exceptional design and user experience. It will also highlight opportunities for creatives to elevate their work, attract growing traffic, and stand out as leaders in the field.
+The website will boost product sales and connect aspiring designers with industry leaders. Built from the ground up with people at its core, it will embody our values through exceptional design and our Coper experience. It will also highlight opportunities for creatives to elevate their work, attract growing traffic, and stand out as leaders in the field.
 
 ## Proposal
 Objective:
@@ -15,7 +17,7 @@ To create a website that embodies the mission of the brand and what it stands fo
 
 Features:
 Navigation:
-* I will add a navigation bar which will feature on all pages.
+* I will add a navigation bar, which will be featured on all pages.
 * The bar will contain links to all main pages
 
 Home page:
@@ -33,11 +35,19 @@ About us page:
 * Information about the store
 * Pictures
 
-Payment dropdown:
-* Only appears when the cart is clicked on
+Cart dropdown:
+* Only appears when the cart is clicked
 Includes:
 * Items selected with name, quantity and total price
-* A purchase button
+* A Go to payment button
+
+Payment modal:
+* Input fields for billing info
+* input fields for shipping info
+* Payment method selection
+* A confirm purchase button
+* A success message if all the information is filled
+* A redirection button, which sends the user back to the product page
 
 Technical requirements
 
@@ -58,7 +68,7 @@ Technical requirements
 
 ---
 
-## 💰 Budget Breakdown
+## Budget Breakdown
 
 | Category                 | Description                          | Cost           |
 |--------------------------|--------------------------------------|----------------|
@@ -69,7 +79,7 @@ Technical requirements
 
 ---
 
-## 📌 Notes
+## Notes
 
 - All development was done manually using vanilla HTML, CSS, and JavaScript.
 - Styling and layout decisions were guided by wireframes and user experience goals.
@@ -97,20 +107,16 @@ About us page:
 * Titles and the motto had been made bold to stand out and pull attention
 
 References:
-* GoDaddy Operating Company, LLC. (2025) Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy ZA. Available at: https://www.godaddy.com/en-ph?msockid=1b0f0f2eca04651a22871933cbcd6469 (Accessed: 4 September 2025).
+* AB Pixels NG, n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * Adityawarman, I., n.d. Pair of beige leather open-toe heeled platform shoes on white textile. [photograph] Available at: https://www.pexels.com/photo/pair-of-beige-leather-open-toe-heeled-platform-shoes-on-white-textile-1445696/ [Accessed 26 Sept. 2025].
+* Copilot, 2025. About section for 31st Emporium, generated using Microsoft Copilot. [Personal communication, 29 September].
+* GoDaddy Operating Company, LLC. (2025) Domain Names, Websites, Hosting & Online Marketing Tools - GoDaddy ZA. Available at: https://www.godaddy.com/en-ph?msockid=1b0f0f2eca04651a22871933cbcd6469 (Accessed: 4 September 2025).
+* Jacob, G., n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * Joseph, T., n.d. Man wearing black suit. [photograph] Available at: https://www.pexels.com/photo/man-wearing-black-suit-2955376/ [Accessed 26 Sept. 2025].
+* Kuzenkov, J., n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * Mnz, n.d. Nike shoes on black background. [photograph] Available at: https://www.pexels.com/photo/nike-shoes-on-black-backround-1598505/ [Accessed 26 Sept. 2025].
 * Mossholder, T., n.d. Shallow focus photo of white open signage. [photograph] Available at: https://www.pexels.com/photo/shallow-focus-photo-of-white-open-sigange-3345876/ [Accessed 26 Sept. 2025].
 * Noah, T., n.d. Woman in yellow short-sleeved hoodie. [photograph] Available at: https://www.pexels.com/photo/woman-in-yellow-short-sleeved-hoodie-3210714/ [Accessed 26 Sept. 2025].
 * Sintan, S., n.d. Man in brand sportswear. [photograph] Available at: https://www.pexels.com/photo/man-in-brand-sportswear-26887062/ [Accessed 26 Sept. 2025].
-* TUBARONES PHOTOGRAPHY, n.d. Man wearing black crew neck shirt. [photograph] Available at: https://www.pexels.com/photo/man-wearing-black-crew-neck-shirt-3026283/ [Accessed 26 Sept. 2025].
-* Kuzenkov, J., n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
-* Jacob, G., n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
-* AB Pixels NG, n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * Thirdman, n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
-
-
-
-Links:
-GitHub: Lunghani-Shilubane/31st-Emporium
+* TUBARONES PHOTOGRAPHY, n.d. Man wearing black crew neck shirt. [photograph] Available at: https://www.pexels.com/photo/man-wearing-black-crew-neck-shirt-3026283/ [Accessed 26 Sept. 2025].
