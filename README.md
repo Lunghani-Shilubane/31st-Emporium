@@ -95,6 +95,18 @@ Index page:
 * The rest of the information on the page is 20px in size
 * A new paragraph of text has been added, which encourages customers to come to the store, with an added image indicating we’re open
 * In accordance with the wireframe, I changed the orientation of the image and text to be straight down, which helps maintain a coherent shape on different devices
+* Added a cart page that displays all the items in the cart with total price and quantity
+* Moved the products to a json file and added product descriptions
+* Passed the json file information to the products page to display the products
+* Created a modal in the products page which displays all the product's information, price and quantity. The price changes as the quantity changes
+* Added functionality to the cart page
+* The cart page now displays the selected items with corresponding prices and the option to change quantity
+* Added a payment modal in the cart page which enables the user to pick a payment method and make a hypothetical payment.
+* Made a folder for the css file
+* Added a contact page with contact information and an equiry form
+* Updated CSS styling
+* Updated references
+* Updated readme file
 
 Product page:
 * Cards, images, short descriptions and prices have been added
@@ -120,22 +132,17 @@ References:
 * Sintan, S., n.d. Man in brand sportswear. [photograph] Available at: https://www.pexels.com/photo/man-in-brand-sportswear-26887062/ [Accessed 26 Sept. 2025].
 * Thirdman, n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * TUBARONES PHOTOGRAPHY, n.d. Man wearing black crew neck shirt. [photograph] Available at: https://www.pexels.com/photo/man-wearing-black-crew-neck-shirt-3026283/ [Accessed 26 Sept. 2025].
+* Iancu, M. (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=9064610 (Accessed: 19 November 2025).
+* Benie (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=3769918 (Accessed: 19 November 2025).
+* Islam, T. (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=1759204 (Accessed: 19 November 2025).
+* Djurin, D. (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=2821961 (Accessed: 19 November 2025).
+* StockSnap (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=2590825 (Accessed: 19 November 2025).
+* Simukonda, R. (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=7441756 (Accessed: 19 November 2025).
+* Victoria (n.d.) Pixabay image. [Online image]. Available at: https://pixabay.com/photos/?utm_content=5688156 (Accessed: 19 November 2025).
+* W3Schools (1999-2025) JavaScript HTML DOM. [Online]. Available at: https://www.w3schools.com/js/js_htmldom.asp (Accessed: 19 November 2025).
+* W3Schools (1999-2025) JavaScript JSON. [Online]. Available at: https://www.w3schools.com/js/js_json.asp (Accessed: 19 November 2025).
+* Stack Overflow (2018) How to read JSON file with fetch in JavaScript. [Online]. Available at: https://stackoverflow.com/questions/51859358/how-to-read-json-file-with-fetch-in-javascript (Accessed: 19 November 2025).
+* GeeksforGeeks (2008) Read JSON file using JavaScript. [Online]. Available at: https://www.geeksforgeeks.org/javascript/read-json-file-using-javascript/ (Accessed: 19 November 2025).
+* W3Schools (1999-2025) How To Create a Modal Box. [Online]. Available at: https://www.w3schools.com/howto/howto_css_modals.asp (Accessed: 19 November 2025).
+* FreeCodeCamp (2021) How to build a modal with JavaScript. [Online]. Available at: https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/ (Accessed: 19 November 2025).
 
-
-
-
-
-
-Image by <a href="https://pixabay.com/users/surprising_media-11873433/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9064610">Mircea Iancu</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9064610">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/bmvbenie-1276059/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3769918">Benie</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3769918">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/tarekmoshin-3580408/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1759204">Tareq Islam</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1759204">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/derneuemann-6406309/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2821961">Darko Djurin</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2821961">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2590825">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2590825">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/robert_rs3-14149749/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7441756">Robert Simukonda</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7441756">Pixabay</a>
-
-Image by <a href="https://pixabay.com/users/vika_glitter-6314823/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5688156">Victoria</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5688156">Pixabay</a>

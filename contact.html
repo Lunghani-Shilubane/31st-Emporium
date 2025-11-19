@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Contact Us</h1>
+
+        <!-- Contact Details Section -->
+        <div class="contact-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <!-- Phone -->
+                <div class="info-card">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+27821234567">+27 82 123 4567</a></p>
+                </div>
+
+                <!-- Email -->
+                <div class="info-card">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@31stemporium.com">info@31stemporium.com</a></p>
+                </div>
+
+                <!-- Location -->
+                <div class="info-card">
+                    <h3>📍 Location</h3>
+                    <p>123 Fashion Street<br>Johannesburg, South Africa<br>2000</p>
+                </div>
+
+                <!-- Hours -->
+                <div class="info-card">
+                    <h3>🕒 Hours</h3>
+                    <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 5PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-section">
+            <h2>Send us a Message</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="contact-section">
+            <h2>Follow Us</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/31stemporium" target="_blank" class="social-btn" id="fb">Facebook</a>
+                <a href="https://www.instagram.com/31stemporium" target="_blank" class="social-btn" id="insta">Instagram</a>
+                <a href="https://www.twitter.com/31stemporium" target="_blank" class="social-btn" id="x">Twitter</a>
+                <a href="https://www.tiktok.com/@31stemporium" target="_blank" class="social-btn" id="tok">TikTok</a>
+                <a href="https://www.youtube.com/@31stemporium" target="_blank" class="social-btn" id="tube">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the form and add submit handler
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            // Prevent default form submission
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate email format
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show success message
+            alert(`Thank you, ${name}! We've received your message and will get back to you soon.`);
+            
+            // Reset the form
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
