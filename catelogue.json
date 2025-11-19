@@ -1,0 +1,93 @@
+[
+    {
+        "image": "images/pexels-terricks-noah-282960-3210714.jpg",
+        "name": "Yellow short sleeved hoodie",
+        "description": "A bright yellow short sleeved hoodie made from soft cotton material.",
+        "quantity": "",
+        "price": 375,
+        "category": "hoodies",
+        "alt name": "product 1"
+    },
+    {
+        "image": "/images/pexels-julia-kuzenkov-442028-1188748.jpg",
+        "name": "Modern graphic tee",
+        "description": "A Short sleeved white shirt with red and black graphics and a black accent.",
+        "quantity": "",
+        "price": 320,
+        "category": "t-shirts",
+        "alt name": "product 2"
+    },
+    {
+        "image": "/images/pexels-godisable-jacob-226636-818992.jpg",
+        "name": "A unique patterned jacket",
+        "description": "A jacket filled with unique patterns and colors to make you stand out. The jacket is made for any occasion and turns heads",
+        "quantity": "",
+        "price": 375,
+        "category": "jacket",
+        "alt name": "product 3"
+    },
+    {
+        "image": "/images/pexels-ab-pixels-ng-31951219.jpg",
+        "name": "Orange traditional Nigerian dress",
+        "description": "An orange dress made from traditional Nigerian fabric. Perfect for cultural events and celebrations.",
+        "quantity": "",
+        "price": 2000,
+        "category": "dress/traditional wear",
+        "alt name": "product 4"
+    },
+    {
+        "image": "/images/pexels-thirdman-6109551.jpg",
+        "name": "Black taditional Abwada",
+        "description": "A black Nigerian abwada for the future prince or king.",
+        "quantity": "",
+        "price": 860,
+        "category": "traditional wear",
+        "alt name": "product 5"
+    },
+    {
+        "image": "/images/pexels-teddyjmodel-2955376.jpg",
+        "name": "Two-piece balck suit",
+        "description": "A black suit jacket matched with black pants for the smooth operators.",
+        "quantity": "",
+        "price": 690,
+        "category": "formal wear/suits/outfit",
+        "alt name": "product 6"
+    },
+    {
+        "image": "/images/pexels-mnzoutfits-1598505.jpg",
+        "name": "Men's hig-top sneakers",
+        "description": "Nike Dior sneakers, grey knit with golden accents.",
+        "quantity": "",
+        "price": 1200,
+        "category": "shoes",
+        "alt name": "product 7"
+    },
+    {
+        "image": "/images/pexels-ihsanaditya-1445696.jpg",
+        "name": "Cream open toe heels",
+        "description": "Cream coloured dress shoes fit for the moment you need them most.",
+        "quantity": "",
+        "price": 750,
+        "category": "shoes",
+        "alt name": "product 8"
+    },
+    {
+        "image": "/images/pexels-sagarsintan-26887062.jpg",
+        "name": "Men's two-piece track suit",
+        "description": "A black sporty top with black track pants.",
+        "quantity": "",
+        "price": 350,
+        "category": "sportswear",
+        "alt name": "product 9"
+    },
+    {
+        "image": "/images/pexels-tubarones-3026283.jpg",
+        "name": "Casual black t-shirt",
+        "description": "A black, casual, street wear tee with a yellow graphic.",
+        "quantity": "",
+        "price": 100,
+        "category": "t-shirts",
+        "alt name": "product 10"
+    }
+
+]

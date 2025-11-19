@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Products</title>
   </head>
+ 
+
   <body>
     <!-- navigation links-->
     <div class="navbar" style=" z-index: 999">
@@ -22,120 +24,46 @@
         Welcome to our store! Browse our products and add them to your cart.
       </div>
 
-      <!-- product cards -->
-      <div class="card-container">
-        <div class="card">
-          <img
-            src="/images/pexels-terricks-noah-282960-3210714.jpg"
-            alt="Product 1"
-            width="150"
-            height="200"
-          /><br />
-          <!-- product image-->
-          <p>Yellow short sleeved hoodie.</p>
-          <p>R375</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-julia-kuzenkov-442028-1188748.jpg"
-            alt="Product 2"
-            width="150"
-            height="200"
-          /><br />
-          <p>Modern graphic tee.</p>
-          <p>R320</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-godisable-jacob-226636-818992.jpg"
-            alt="Product 3"
-            width="150"
-            height="200"
-          /><br />
-          <p>Unique patterned jacket.</p>
-          <p>R500</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-ab-pixels-ng-31951219.jpg"
-            alt="Product 4"
-            width="150"
-            height="200"
-          /><br />
-          <p>Orange traditional Nigerian dress.</p>
-          <p>R2000</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-thirdman-6109551.jpg"
-            alt="Product 5"
-            width="150"
-            height="200"
-          /><br />
-          <p>Black traditional Nigerian Abwada.</p>
-          <p>R860</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-teddyjmodel-2955376.jpg"
-            alt="Product 6"
-            width="150"
-            height="200"
-          /><br />
-          <p>Two-piece black suit</p>
-          <p>R1500</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-mnzoutfits-1598505.jpg"
-            alt="Product 7"
-            width="150"
-            height="200"
-          /><br />
-          <p>Men's High-top sneakers</p>
-          <p>R1200</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-ihsanaditya-1445696.jpg"
-            alt="Product 8"
-            width="150"
-            height="200"
-          /><br />
-          <p>Open toe heels</p>
-          <p>R750</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-sagarsintan-26887062.jpg"
-            alt="Product 9"
-            width="150"
-            height="200"
-          /><br />
-          <p>Men's two-piece track outfit</p>
-          <p>R350</p>
-          
-        </div>
-        <div class="card">
-          <img
-            src="/images/pexels-tubarones-3026283.jpg"
-            alt="Product 10"
-            width="150"
-            height="200"
-          /><br />
-           <p>Casual black t-shirt</p>
-           <p>R100</p>
-         
-        </div>
-      </div>
+      <div id="card-container"></div>
+
+      
     </div>
+
+
+     <script>
+        // Load the JSON file (relative path) and render products
+        fetch('./catelogue.json')
+          .then(response => {
+            if (!response.ok) throw new Error('Failed to load catelogue.json');
+            return response.json();
+          })
+          .then(products => {
+            // products should be an array of objects from catelogue.json
+            const container = document.getElementById('card-container');
+            container.innerHTML = ''; // clear if needed
+
+            products.forEach(p => {
+              const card = document.createElement('div');
+              card.className = 'card';
+
+              card.innerHTML = `
+                <img src="${p.image || 'images/placeholder.png'}" alt="${(p.name || '')}" width="150" height="200" /><br />
+                <h3>${p.name || 'Unnamed product'}</h3>
+                <p>${p.description || ''}</p>
+                <div class="price">${p.price !== undefined ? 'R' + p.price : ''}</div>
+              `;
+              container.appendChild(card);
+            });
+          })
+          .catch(err => {
+            console.error(err);
+            document.getElementById('card-container').textContent = 'Could not load products.';
+          });
+      </script>
   </body>
 </html>
+
+
+
+
+
