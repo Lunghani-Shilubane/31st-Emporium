@@ -120,3 +120,22 @@ References:
 * Sintan, S., n.d. Man in brand sportswear. [photograph] Available at: https://www.pexels.com/photo/man-in-brand-sportswear-26887062/ [Accessed 26 Sept. 2025].
 * Thirdman, n.d. Untitled photo. [photograph] Available at: https://www.pexels.com/photo [Accessed 26 Sept. 2025].
 * TUBARONES PHOTOGRAPHY, n.d. Man wearing black crew neck shirt. [photograph] Available at: https://www.pexels.com/photo/man-wearing-black-crew-neck-shirt-3026283/ [Accessed 26 Sept. 2025].
+
+
+
+
+
+
+Image by <a href="https://pixabay.com/users/surprising_media-11873433/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9064610">Mircea Iancu</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9064610">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/bmvbenie-1276059/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3769918">Benie</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3769918">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/tarekmoshin-3580408/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1759204">Tareq Islam</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1759204">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/derneuemann-6406309/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2821961">Darko Djurin</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2821961">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2590825">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2590825">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/robert_rs3-14149749/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7441756">Robert Simukonda</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7441756">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/vika_glitter-6314823/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5688156">Victoria</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5688156">Pixabay</a>

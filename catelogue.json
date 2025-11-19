@@ -98,6 +98,81 @@
         "price": 100,
         "category": "t-shirts",
         "alt name": "product 10"
+    },
+    {
+        "id": 11,
+        "image": "/images/wedding-dress-3769918_1280.jpg",
+        "name": "Stylish white wedding dress",
+        "description": "A white wedding dress with a flower frill pattern.",
+        "quantity": "",
+        "price": 5000,
+        "category": "dresses",
+        "alt name": "product 11"
+    },
+    {
+        "id": 12,
+        "image": "/images/bridesmaid-9064610_1280.jpg",
+        "name": "Black birdesmaid dress",
+        "description": "A long elegant black bridesmaid dress with shoulder straps.",
+        "quantity": "",
+        "price": 2590,
+        "category": "t-shirts",
+        "alt name": "product 12"
+    },
+    {
+        "id": 13,
+        "image": "/images/sharee-1759204_1280.jpg",
+        "name": "Pink saree dress",
+        "description": "A beautiful pink saree dress with patterns from top to bottom.",
+        "quantity": "",
+        "price": 3200,
+        "category": "dresses",
+        "alt name": "product 13"
+    },
+    {
+        "id": 14,
+        "image": "/images/jacket-2821961_1280.jpg",
+        "name": "Black bomber jacket",
+        "description": "Black jacket with dark silver accents, perfect for any occasion.",
+        "quantity": "",
+        "price": 400,
+        "category": "jacket",
+        "alt name": "product 14"
+    },
+    {
+        "id": 15,
+        "image": "/images/guy-2590825_1280.jpg",
+        "name": "Formal men's black pants",
+        "description": "Men's formal black pants for any formal event or occasion.",
+        "quantity": "",
+        "price": 200,
+        "category": "pants",
+        "alt name": "product 15"
+    },
+    {
+       "id": 16,
+        "image": "/images/handshake-7441756_1280.jpg",
+        "name": "Men's black casual jeans and brown chino pants",
+        "description": "Men's everyday pants. Sleek, clean and of great quality.",
+        "quantity": "",
+        "price": 400,
+        "category": "pants",
+        "alt name": "product 16" 
+    },
+    {
+        "id": 17,
+        "image": "/images/human-5688156_1280.jpg",
+        "name": "Suit jacket",
+        "description": "An elegantly wool woven jacket.",
+        "quantity": "",
+        "price": 320,
+        "category": "jacket",
+        "alt name": "product 17" 
     }
 
 ]
+
+
+
+
+

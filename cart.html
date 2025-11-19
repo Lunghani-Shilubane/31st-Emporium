@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <!-- Payment Modal (REPLACE existing modal and script with the block below) -->
+    <!-- Payment Modal -->
     <div id="payment-modal" class="modal" style="display: none;">
       <div class="modal-content">
         <span class="close" id="close-payment">&times;</span>
@@ -116,10 +116,6 @@
       // keep cart in sessionStorage (existing)
       let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
-      // displayCart(), updateQuantity(), removeItem(), updateCartTotal(), updateCartCount()
-      // ...existing functions above should remain unchanged...
-      // (No change needed here if those functions are already present earlier in the file.)
-
       // Payment modal behaviour and validation
       const paymentModal = document.getElementById('payment-modal');
       const closePaymentBtn = document.getElementById('close-payment');
@@ -198,7 +194,6 @@
 
         // Simulate payment processing
         const total = cart.reduce((s, it) => s + (it.price * it.quantity), 0).toFixed(2);
-        // You can expand this block to actually call a payment API
         alert(`Payment method: ${method.toUpperCase()}\nAmount: R${total}\nPayment processed (simulation).`);
 
         // Clear cart and update UI
@@ -212,7 +207,7 @@
       // ensure modal shows correct fields on open (default)
       showFieldsFor(document.querySelector('input[name="payment-method"]:checked').value);
 
-      // Initial display (if these are used earlier ensure no duplication)
+      // Initial display
       displayCart();
       updateCartCount();
     </script>
