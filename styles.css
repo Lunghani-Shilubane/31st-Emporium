@@ -287,6 +287,164 @@ h1, h2, h3, p {
   background-color: #229954;
 }
 
+/* Cart Page Styles */
+#cart-items-container {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  margin: 0 0 5px 0;
+}
+
+.item-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-quantity input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.item-total {
+  text-align: right;
+  min-width: 100px;
+}
+
+.item-total p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+#cart-summary {
+  text-align: right;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  margin-top: 30px;
+}
+
+#cart-summary h3 {
+  font-size: 24px;
+  color: #27ae60;
+}
+
+.payment-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.payment-btn:hover {
+  background-color: #229954;
+}
+
+/* Payment Form Styles */
+#payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.submit-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #229954;
+}
+
 @media (max-width: 600px) {
   .modal-body {
     flex-direction: column;
@@ -294,5 +452,22 @@ h1, h2, h3, p {
   
   #modal-image {
     max-width: 100%;
+  }
+  
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .item-quantity {
+    justify-content: center;
+  }
+  
+  .item-total {
+    text-align: center;
+  }
+  
+  .form-row {
+    flex-direction: column;
   }
 }

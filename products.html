@@ -15,7 +15,6 @@
       <a href="products.html">Products</a>
       <a href="aboutus.html">About us</a>
         <a href="/cart.html" style="display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.358); border-radius: 6px; width: 48px; height: 48px; padding: 0;">
-    <img src="/images/cart-icon.svg" alt="Cart" style="width:28px; height:28px; margin: auto;">
     <span id="cart-count" style="position: absolute; background: red; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">0</span>
   </a>
     </div>
@@ -133,13 +132,40 @@
         });
 
         document.getElementById('add-to-cart-btn').addEventListener('click', () => {
-          const qty = parseInt(quantityInput.value);
-          alert(`Added ${qty} x ${currentProduct.name} to cart`);
-          
-          // Update cart count
-          const cartCount = document.getElementById('cart-count');
-          cartCount.textContent = parseInt(cartCount.textContent) + qty;
-          
+          const qty = Math.max(1, parseInt(quantityInput.value, 10) || 1);
+
+          // load/normalize cart
+          let cart = JSON.parse(sessionStorage.getItem('cart'));
+          if (!Array.isArray(cart)) cart = [];
+
+          // ensure a stable id -- fallback to name if id is missing
+          const prodId = (currentProduct && (currentProduct.id ?? currentProduct.name)) || Date.now().toString();
+
+          // find existing item by id
+          const existingItem = cart.find(item => String(item.id) === String(prodId));
+
+          if (existingItem) {
+            existingItem.quantity = (existingItem.quantity || 0) + qty;
+          } else {
+            cart.push({
+              id: prodId,
+              name: currentProduct.name || 'Product',
+              price: Number(currentProduct.price) || 0,
+              description: currentProduct.description || '',
+              image: currentProduct.image || 'images/placeholder.png',
+              quantity: qty
+            });
+          }
+
+          sessionStorage.setItem('cart', JSON.stringify(cart));
+
+          // update cart badge (sum of quantities)
+          const cartCountEl = document.getElementById('cart-count');
+          if (cartCountEl) {
+            const totalCount = cart.reduce((sum, it) => sum + (Number(it.quantity) || 0), 0);
+            cartCountEl.textContent = totalCount;
+          }
+
           modal.style.display = 'none';
         });
       </script>

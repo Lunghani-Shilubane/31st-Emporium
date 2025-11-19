@@ -14,7 +14,6 @@
       <a href="products.html">Products</a>
       <a href="aboutus.html">About us</a>
       <a href="/cart.html" style="display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.358); border-radius: 6px; width: 48px; height: 48px; padding: 0;">
-        <img src="/images/cart-icon.svg" alt="Cart" style="width:28px; height:28px; margin: auto;">
         <span id="cart-count" style="position: absolute; background: red; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold;">0</span>
       </a>
     </div>
@@ -28,44 +27,83 @@
       </div>
     </div>
 
-    <!-- Payment Modal -->
+    <!-- Payment Modal (REPLACE existing modal and script with the block below) -->
     <div id="payment-modal" class="modal" style="display: none;">
       <div class="modal-content">
         <span class="close" id="close-payment">&times;</span>
         <h2>Payment Details</h2>
-        <form id="payment-form">
-          <div class="form-group">
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" required />
-          </div>
 
+        <form id="payment-form" novalidate>
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="address">Address:</label>
-            <input type="text" id="address" required />
-          </div>
-
-          <div class="form-group">
-            <label for="card-number">Card Number:</label>
-            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required />
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="expiry">Expiry Date:</label>
-              <input type="text" id="expiry" placeholder="MM/YY" required />
-            </div>
-            <div class="form-group">
-              <label for="cvv">CVV:</label>
-              <input type="text" id="cvv" placeholder="123" required />
+            <label>Payment method</label>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+              <label><input type="radio" name="payment-method" value="card" checked> Card</label>
+              <label><input type="radio" name="payment-method" value="paypal"> PayPal</label>
+              <label><input type="radio" name="payment-method" value="mobile"> Mobile Money</label>
+              <label><input type="radio" name="payment-method" value="cod"> Cash on Delivery</label>
             </div>
           </div>
 
-          <div class="form-group">
+          <!-- Card fields -->
+          <div id="card-fields" class="payment-fields" style="margin-top:12px;">
+            <div class="form-group">
+              <label for="card-name">Name on card</label>
+              <input type="text" id="card-name" />
+            </div>
+            <div class="form-group">
+              <label for="card-number">Card Number</label>
+              <input type="text" id="card-number" placeholder="1234 5678 9012 3456" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="expiry">Expiry (MM/YY)</label>
+                <input type="text" id="expiry" placeholder="MM/YY" />
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" />
+              </div>
+            </div>
+          </div>
+
+          <!-- PayPal fields -->
+          <div id="paypal-fields" class="payment-fields" style="display:none; margin-top:12px;">
+            <div class="form-group">
+              <label for="paypal-email">PayPal Email</label>
+              <input type="email" id="paypal-email" placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <!-- Mobile Money fields -->
+          <div id="mobile-fields" class="payment-fields" style="display:none; margin-top:12px;">
+            <div class="form-group">
+              <label for="mobile-provider">Provider</label>
+              <select id="mobile-provider">
+                <option value="">Select provider</option>
+                <option value="mtn">MTN</option>
+                <option value="vodacom">Vodacom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mobile-number">Mobile Number</label>
+              <input type="tel" id="mobile-number" placeholder="+27 82 123 4567" />
+            </div>
+          </div>
+
+          <!-- Cash on Delivery fields -->
+          <div id="cod-fields" class="payment-fields" style="display:none; margin-top:12px;">
+            <div class="form-group">
+              <label for="cod-contact">Contact number for delivery</label>
+              <input type="tel" id="cod-contact" placeholder="+27 82 123 4567" />
+            </div>
+            <div class="form-group">
+              <label for="cod-note">Delivery note (optional)</label>
+              <input type="text" id="cod-note" />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top:14px;">
             <p>Total Amount: <strong id="payment-total">R0.00</strong></p>
           </div>
 
@@ -75,84 +113,40 @@
     </div>
 
     <script>
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      // keep cart in sessionStorage (existing)
+      let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
-      // Display cart items
-      function displayCart() {
-        const container = document.getElementById('cart-items-container');
-        
-        if (cart.length === 0) {
-          container.innerHTML = '<p style="text-align: center; font-size: 18px; color: #666;">Your cart is empty</p>';
-          document.getElementById('cart-summary').style.display = 'none';
-          return;
-        }
+      // displayCart(), updateQuantity(), removeItem(), updateCartTotal(), updateCartCount()
+      // ...existing functions above should remain unchanged...
+      // (No change needed here if those functions are already present earlier in the file.)
 
-        document.getElementById('cart-summary').style.display = 'block';
-        container.innerHTML = '';
-
-        cart.forEach((item, index) => {
-          const itemTotal = (item.price * item.quantity).toFixed(2);
-          const cartItem = document.createElement('div');
-          cartItem.className = 'cart-item';
-
-          cartItem.innerHTML = `
-            <img src="${item.image || 'images/placeholder.png'}" alt="${item.name}" width="100" />
-            <div class="item-info">
-              <h3>${item.name}</h3>
-              <p>${item.description}</p>
-              <p class="item-price">R${item.price}</p>
-            </div>
-            <div class="item-quantity">
-              <button class="qty-btn" onclick="updateQuantity(${index}, -1)">−</button>
-              <input type="number" value="${item.quantity}" readonly />
-              <button class="qty-btn" onclick="updateQuantity(${index}, 1)">+</button>
-            </div>
-            <div class="item-total">
-              <p>R${itemTotal}</p>
-              <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
-            </div>
-          `;
-          container.appendChild(cartItem);
-        });
-
-        updateCartTotal();
-      }
-
-      function updateQuantity(index, change) {
-        cart[index].quantity += change;
-        if (cart[index].quantity < 1) {
-          cart.splice(index, 1);
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCart();
-        updateCartCount();
-      }
-
-      function removeItem(index) {
-        cart.splice(index, 1);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        displayCart();
-        updateCartCount();
-      }
-
-      function updateCartTotal() {
-        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
-        document.getElementById('cart-total').textContent = 'R' + total;
-        document.getElementById('payment-total').textContent = 'R' + total;
-      }
-
-      function updateCartCount() {
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.getElementById('cart-count').textContent = count;
-      }
-
-      // Payment Modal
+      // Payment modal behaviour and validation
       const paymentModal = document.getElementById('payment-modal');
       const closePaymentBtn = document.getElementById('close-payment');
       const continuePaymentBtn = document.getElementById('continue-payment-btn');
       const paymentForm = document.getElementById('payment-form');
 
+      const paymentMethodRadios = document.querySelectorAll('input[name="payment-method"]');
+      const cardFields = document.getElementById('card-fields');
+      const paypalFields = document.getElementById('paypal-fields');
+      const mobileFields = document.getElementById('mobile-fields');
+      const codFields = document.getElementById('cod-fields');
+      const paymentTotalEl = document.getElementById('payment-total');
+
+      function showFieldsFor(method) {
+        cardFields.style.display = method === 'card' ? '' : 'none';
+        paypalFields.style.display = method === 'paypal' ? '' : 'none';
+        mobileFields.style.display = method === 'mobile' ? '' : 'none';
+        codFields.style.display = method === 'cod' ? '' : 'none';
+      }
+
+      // wire radios
+      paymentMethodRadios.forEach(r => r.addEventListener('change', e => showFieldsFor(e.target.value)));
+
       continuePaymentBtn.addEventListener('click', () => {
+        // update total shown in modal
+        const total = cart.reduce((s, it) => s + (it.price * it.quantity), 0).toFixed(2);
+        paymentTotalEl.textContent = 'R' + total;
         paymentModal.style.display = 'block';
       });
 
@@ -161,22 +155,64 @@
       });
 
       window.addEventListener('click', (event) => {
-        if (event.target === paymentModal) {
-          paymentModal.style.display = 'none';
-        }
+        if (event.target === paymentModal) paymentModal.style.display = 'none';
       });
+
+      function validatePayment(method) {
+        if (cart.length === 0) {
+          alert('Your cart is empty.');
+          return false;
+        }
+        if (method === 'card') {
+          const name = document.getElementById('card-name').value.trim();
+          const number = document.getElementById('card-number').value.replace(/\s+/g,'');
+          const expiry = document.getElementById('expiry').value.trim();
+          const cvv = document.getElementById('cvv').value.trim();
+          if (!name || !number || !expiry || !cvv) {
+            alert('Please complete all card fields.');
+            return false;
+          }
+          if (!/^\d{12,19}$/.test(number)) {
+            alert('Enter a valid card number (numbers only).');
+            return false;
+          }
+        } else if (method === 'paypal') {
+          const email = document.getElementById('paypal-email').value.trim();
+          if (!email) { alert('Please enter your PayPal email.'); return false; }
+          if (!/^\S+@\S+\.\S+$/.test(email)) { alert('Enter a valid email.'); return false; }
+        } else if (method === 'mobile') {
+          const provider = document.getElementById('mobile-provider').value;
+          const number = document.getElementById('mobile-number').value.trim();
+          if (!provider || !number) { alert('Please select provider and enter mobile number.'); return false; }
+        } else if (method === 'cod') {
+          const contact = document.getElementById('cod-contact').value.trim();
+          if (!contact) { alert('Please provide a contact number for delivery.'); return false; }
+        }
+        return true;
+      }
 
       paymentForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Payment successful! Thank you for your purchase.');
+        const method = document.querySelector('input[name="payment-method"]:checked').value;
+        if (!validatePayment(method)) return;
+
+        // Simulate payment processing
+        const total = cart.reduce((s, it) => s + (it.price * it.quantity), 0).toFixed(2);
+        // You can expand this block to actually call a payment API
+        alert(`Payment method: ${method.toUpperCase()}\nAmount: R${total}\nPayment processed (simulation).`);
+
+        // Clear cart and update UI
         cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart));
+        sessionStorage.setItem('cart', JSON.stringify(cart));
         paymentModal.style.display = 'none';
         displayCart();
         updateCartCount();
       });
 
-      // Initial display
+      // ensure modal shows correct fields on open (default)
+      showFieldsFor(document.querySelector('input[name="payment-method"]:checked').value);
+
+      // Initial display (if these are used earlier ensure no duplication)
       displayCart();
       updateCartCount();
     </script>
